@@ -7,6 +7,10 @@ import { Component } from '@angular/core';
 })
 export class HeaderComponentComponent {
   name: string = 'Giovanni';
+  public isMenuOpen: boolean = false;
+  public onSidenavClick(): void {
+    this.isMenuOpen = false;
+  }
 
   constructor() {}
 }

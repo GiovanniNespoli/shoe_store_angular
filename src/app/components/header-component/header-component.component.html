@@ -1,3 +1,22 @@
 <section>
-  <img src="assets/banner.png" alt="banner" />
+  <button mat-button class="menu-button" (click)="sidenav.toggle()">
+    <mat-icon class="menu-style">{{
+      isMenuOpen ? "menu_open" : "menu"
+    }}</mat-icon>
+  </button>
+  <mat-sidenav-container class="sidenav-container">
+    <mat-sidenav
+      #sidenav
+      autoFocus="false"
+      [(opened)]="isMenuOpen"
+      class="sidenav"
+      (click)="onSidenavClick()"
+    >
+      <a routerLink="/">Início</a>
+      <a routerLink="/all-items">Todos os produtos</a>
+      <a routerLink="/promotions">Promoções</a>
+      <a routerLink="/your-bag">Seus itens</a>
+      <a routerLink="/about">Sobre</a>
+    </mat-sidenav>
+  </mat-sidenav-container>
 </section>
