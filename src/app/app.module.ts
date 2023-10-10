@@ -16,7 +16,7 @@ import { AboutPageComponent } from './pages/about-page/about-page.component';
 import { AllItemsPageComponent } from './pages/all-items-page/all-items-page.component';
 import { YourItemsPageComponent } from './pages/your-items-page/your-items-page.component';
 import { PromotionsPageComponent } from './pages/promotions-page/promotions-page.component';
-import { StoreAllItemsComponent } from './components/store-all-items/store-all-items.component';
+import { StoreAllItemsComponentComponent } from './components/store-all-items-component/store-all-items-component.component';
 
 @NgModule({
   declarations: [
@@ -29,8 +29,8 @@ import { StoreAllItemsComponent } from './components/store-all-items/store-all-i
     HeaderComponentComponent,
     StoreListComponentComponent,
     ShopIconComponentComponent,
-    StoreAllItemsComponent,
     BannerComponentComponent,
+    StoreAllItemsComponentComponent,
   ],
   imports: [
     BrowserModule,
