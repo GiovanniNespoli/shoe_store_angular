@@ -1,4 +1,5 @@
 import { Component } from '@angular/core';
+import { SellNumberService } from 'src/app/shared/service/sell-number.service';
 
 @Component({
   selector: 'app-header-component',
@@ -12,5 +13,15 @@ export class HeaderComponentComponent {
     this.isMenuOpen = false;
   }
 
-  constructor() {}
+  sellNumbers: number = 0;
+
+  constructor(private sellNumbersService: SellNumberService) {
+    console.log('Teste', this.showAllSellNumbers());
+  }
+
+  showAllSellNumbers() {
+    this.sellNumbersService
+      .getSellNumber()
+      .subscribe((numbers) => (this.sellNumbers = numbers.length));
+  }
 }

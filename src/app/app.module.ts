@@ -17,6 +17,8 @@ import { AllItemsPageComponent } from './pages/all-items-page/all-items-page.com
 import { YourItemsPageComponent } from './pages/your-items-page/your-items-page.component';
 import { PromotionsPageComponent } from './pages/promotions-page/promotions-page.component';
 import { StoreAllItemsComponentComponent } from './components/store-all-items-component/store-all-items-component.component';
+import { HttpClientModule } from '@angular/common/http';
+import { SellNumberService } from './shared/service/sell-number.service';
 
 @NgModule({
   declarations: [
@@ -33,13 +35,14 @@ import { StoreAllItemsComponentComponent } from './components/store-all-items-co
     StoreAllItemsComponentComponent,
   ],
   imports: [
+    HttpClientModule,
     BrowserModule,
     AppRoutingModule,
     BrowserAnimationsModule,
     MatIconModule,
     AppUiModule,
   ],
-  providers: [],
+  providers: [SellNumberService],
   bootstrap: [AppComponent],
 })
 export class AppModule {}

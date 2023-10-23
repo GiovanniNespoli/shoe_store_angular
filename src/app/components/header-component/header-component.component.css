@@ -9,6 +9,11 @@ section {
   align-items: center;
 }
 
+h1 {
+  color: #fff;
+  margin: auto;
+}
+
 .menu-button {
   margin-right: 24px;
   line-height: normal;
